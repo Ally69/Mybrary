@@ -6,7 +6,7 @@ const Book = require('../models/book')
 // All Authors Route
 router.get('/',  async (req, res) => {
     let searchOptions = {}
-    if (req.query.name != null && req.query.name !== ''){
+    if (req.query.name != null && req.query.name !== '') {
         searchOptions.name = new RegExp(req.query.name, 'i')
     }
     try {
@@ -89,7 +89,7 @@ router.delete('/:id', async (req, res) => {
       await author.remove()
          res.redirect('/authors')
     } catch {
-        if (author == null){
+        if (author == null) {
             res.redirect('/')
         } else {
         res.redirect(`/authors/${author.id}`)
