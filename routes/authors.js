@@ -69,7 +69,6 @@ router.put('/:id', async (req, res) => {
       author.name = req.body.name
       await author.save()
          res.redirect(`/authors/${author.id}`)
-         res.redirect('authors')
     } catch {
         if (author == null) {
             res.redirect('/')

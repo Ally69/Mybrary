@@ -51,4 +51,5 @@
 
 .btn-danger:hover {
     color: var(--color-btn-primary-text-dark);
+    background-color: var(--color-btn-danger-background-dark);
 }
